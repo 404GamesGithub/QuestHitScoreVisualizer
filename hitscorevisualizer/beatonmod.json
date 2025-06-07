@@ -8,8 +8,8 @@
         "Does NOT support color fading!"
     ],
     "category": "Gameplay",
-    "gameVersion": "1.1.0",
-    "version": "1.4.8.5",
+    "gameVersion": "1.40.4",
+    "version": "1.4.9",
     "links": {
         "project-home": "https://github.com/sc2ad/QuestHitScoreVisualizer"
     },
