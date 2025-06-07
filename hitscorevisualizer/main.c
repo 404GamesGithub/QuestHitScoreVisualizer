@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <sys/stat.h> 
+#include <sys/stat.h>
 #include <fcntl.h>
 #include <wchar.h>
 #include <unistd.h>
@@ -18,24 +18,18 @@
 #endif
 
 #undef log
-#define log(...) __android_log_print(ANDROID_LOG_INFO, "QuestHook", "[HitScoreVisualizer v1.4.8.5] " __VA_ARGS__)
+#define log(...) __android_log_print(ANDROID_LOG_INFO, "QuestHook", "[HitScoreVisualizer v1.4.9] " __VA_ARGS__)
 
 #define MAX_JSON_TOKENS 512
 #define CONFIG_FILE "/sdcard/Android/data/com.beatgames.beatsaber/files/mods/HitScoreVisualizerConfig.json"
 
-// TMP_Text.set_richText: 0x512540
-#define TMP_Text_set_richText_offset 0x512540
-// TMP_Text.set_enableWordWrapping: 0x51205C
-#define TMP_Text_set_enableWordWrapping_offset 0x51205C
-// TMP_Text.set_overflowMode: 0x512128
-#define TMP_Text_set_oferflowMode_offset 0x512128
-// TMP_Text.get_text: 0x510D88
-#define TMP_Text_get_text_offset 0x510D88
-// TMP_Text.set_text: 0x510D90
-#define TMP_Text_set_text_offset 0x510D90
-// ScoreController.RawScoreWithoutMultiplier: 0x48C248
-#define RawScoreWithoutMulitplier_offset 0x48C248
-// HandleSaberAfterCutSwingRatingCounterDidChangeEvent: 0x13233DC
+// Offsets for Beat Saber 1.40.4
+#define TMP_Text_set_richText_offset 0x933E98
+#define TMP_Text_set_enableWordWrapping_offset 0x9339B4
+#define TMP_Text_set_overflowMode_offset 0x933A80
+#define TMP_Text_get_text_offset 0x9326E0
+#define TMP_Text_set_text_offset 0x9326E8
+#define RawScoreWithoutMulitplier_offset 0x7E31A4
 #define HandleSaberAfterCutSwingRatingCounterDidChangeEvent_offset 0x13233DC
 
 typedef struct {
